@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp.sp
+"wired_mouse\startup_stm32f405xx.o"
+"wired_mouse\main.o"
+"wired_mouse\gpio.o"
+"wired_mouse\stm32f4xx_it.o"
+"wired_mouse\stm32f4xx_hal_msp.o"
+"wired_mouse\stm32f4xx_hal_rcc.o"
+"wired_mouse\stm32f4xx_hal_rcc_ex.o"
+"wired_mouse\stm32f4xx_hal_flash.o"
+"wired_mouse\stm32f4xx_hal_flash_ex.o"
+"wired_mouse\stm32f4xx_hal_flash_ramfunc.o"
+"wired_mouse\stm32f4xx_hal_gpio.o"
+"wired_mouse\stm32f4xx_hal_dma_ex.o"
+"wired_mouse\stm32f4xx_hal_dma.o"
+"wired_mouse\stm32f4xx_hal_pwr.o"
+"wired_mouse\stm32f4xx_hal_pwr_ex.o"
+"wired_mouse\stm32f4xx_hal_cortex.o"
+"wired_mouse\stm32f4xx_hal.o"
+"wired_mouse\stm32f4xx_hal_exti.o"
+"wired_mouse\system_stm32f4xx.o"
+"wired_mouse\bsp.o"
+"wired_mouse\bsp_key.o"
+--strict --scatter "wired_mouse\wired_mouse.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "wired_mouse.map" -o wired_mouse\wired_mouse.axf
