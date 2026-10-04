@@ -3,7 +3,7 @@
 //
 
 #include "bsp_key.h"
-#include "main.h"
+#include "gpio.h"
 
 GPIO_TypeDef* key_port[KEY_NUM] = {LEFT_KEY_GPIO_Port, RIGHT_KEY_GPIO_Port, MIDDLE_KEY_GPIO_Port, KEY_SET_GPIO_Port, KEY_LEFT_FRONT_GPIO_Port, KEY_LEFT_DOWN_GPIO_Port};
 uint16_t key_pin[KEY_NUM] = {LEFT_KEY_Pin, RIGHT_KEY_Pin, MIDDLE_KEY_Pin, KEY_SET_Pin, KEY_LEFT_FRONT_Pin, KEY_LEFT_DOWN_Pin};

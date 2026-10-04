@@ -2,8 +2,11 @@
 "wired_mouse\startup_stm32f405xx.o"
 "wired_mouse\main.o"
 "wired_mouse\gpio.o"
+"wired_mouse\tim.o"
 "wired_mouse\stm32f4xx_it.o"
 "wired_mouse\stm32f4xx_hal_msp.o"
+"wired_mouse\stm32f4xx_hal_tim.o"
+"wired_mouse\stm32f4xx_hal_tim_ex.o"
 "wired_mouse\stm32f4xx_hal_rcc.o"
 "wired_mouse\stm32f4xx_hal_rcc_ex.o"
 "wired_mouse\stm32f4xx_hal_flash.o"
@@ -20,6 +23,7 @@
 "wired_mouse\system_stm32f4xx.o"
 "wired_mouse\bsp.o"
 "wired_mouse\bsp_key.o"
+"wired_mouse\bsp_encoder.o"
 --strict --scatter "wired_mouse\wired_mouse.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "tim.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -54,7 +55,7 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-uint8_t key_status[KEY_NUM] = {0};
+
 /* USER CODE END 0 */
 
 /**
@@ -86,6 +87,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
   bsp_init();
   /* USER CODE END 2 */
@@ -97,31 +99,6 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    bsp_key_scan_per10ms();
-    while (bsp_key_buffer_check())
-    {
-      switch (bsp_get_key())
-      {
-        case KEY0_DOWN:key_status[0]=1;break;
-        case KEY0_UP:key_status[0]=0;break;
-
-        case KEY1_DOWN:key_status[1]=1;break;
-        case KEY1_UP:key_status[1]=0;break;
-
-        case KEY2_DOWN:key_status[2]=1;break;
-        case KEY2_UP:key_status[2]=0;break;
-
-        case KEY3_DOWN:key_status[3]=1;break;
-        case KEY3_UP:key_status[3]=0;break;
-
-        case KEY4_DOWN:key_status[4]=1;break;
-        case KEY4_UP:key_status[4]=0;break;
-
-        case KEY5_DOWN:key_status[5]=1;break;
-        case KEY5_UP:key_status[5]=0;break;
-      }
-    }
-    HAL_Delay(10);
   }
   /* USER CODE END 3 */
 }

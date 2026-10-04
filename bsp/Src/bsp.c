@@ -7,4 +7,5 @@
 void bsp_init()
 {
     bsp_key_init();
+    bsp_encoder_init();
 }

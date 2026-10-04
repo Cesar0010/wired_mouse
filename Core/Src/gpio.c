@@ -47,6 +47,7 @@ void MX_GPIO_Init(void)
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
+  __HAL_RCC_GPIOC_CLK_ENABLE();
 
   /*Configure GPIO pins : LEFT_KEY_Pin RIGHT_KEY_Pin MIDDLE_KEY_Pin KEY_SET_Pin
                            KEY_LEFT_FRONT_Pin KEY_LEFT_DOWN_Pin */

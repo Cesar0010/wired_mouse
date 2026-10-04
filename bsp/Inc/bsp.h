@@ -6,6 +6,7 @@
 #define WIRED_MOUSE_BSP_H
 
 #include "bsp_key.h"
+#include "bsp_encoder.h"
 
 void bsp_init();
 

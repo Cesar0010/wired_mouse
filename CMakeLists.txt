@@ -37,6 +37,8 @@ add_executable(${CMAKE_PROJECT_NAME}
         bsp/Inc/bsp.h
         bsp/Src/bsp.c
         bsp/Src/bsp_key.c
+        bsp/Inc/bsp_encoder.h
+        bsp/Src/bsp_encoder.c
 )
 
 # Add STM32CubeMX generated sources
@@ -52,6 +54,7 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
         bsp/Src/bsp.c
         bsp/Src/bsp_key.c
+        bsp/Src/bsp_encoder.c
 )
 
 # Add include paths
