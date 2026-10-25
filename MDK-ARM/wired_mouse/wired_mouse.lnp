@@ -2,6 +2,7 @@
 "wired_mouse\startup_stm32f405xx.o"
 "wired_mouse\main.o"
 "wired_mouse\gpio.o"
+"wired_mouse\dma.o"
 "wired_mouse\tim.o"
 "wired_mouse\stm32f4xx_it.o"
 "wired_mouse\stm32f4xx_hal_msp.o"
@@ -24,6 +25,7 @@
 "wired_mouse\bsp.o"
 "wired_mouse\bsp_key.o"
 "wired_mouse\bsp_encoder.o"
+"wired_mouse\bsp_ws2812.o"
 --strict --scatter "wired_mouse\wired_mouse.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

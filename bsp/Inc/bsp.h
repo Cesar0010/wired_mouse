@@ -7,6 +7,7 @@
 
 #include "bsp_key.h"
 #include "bsp_encoder.h"
+#include "bsp_ws2812.h"
 
 void bsp_init();
 
