@@ -102,17 +102,8 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    bsp_ws2812_set_color(250,0,0);
-    bsp_ws2812_refresh();
-    HAL_Delay(1000);
-
-    bsp_ws2812_set_color(0,250,0);
-    bsp_ws2812_refresh();
-    HAL_Delay(1000);
-
-    bsp_ws2812_set_color(0,0,250);
-    bsp_ws2812_refresh();
-    HAL_Delay(1000);
+    bsp_ws2812_breathe();
+    HAL_Delay(20);
   }
   /* USER CODE END 3 */
 }

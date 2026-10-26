@@ -12,7 +12,19 @@
 #define WS2812_BIT1_CCR 59
 #define WS2812_RESET_SIZE 224
 
-void bsp_ws2812_set_color(uint8_t g, uint8_t r, uint8_t b);
+#define COLOR_NUM 6
+#define LIGHT_STATE 25
+
+typedef struct
+{
+    uint8_t green;
+    uint8_t red;
+    uint8_t blue;
+}WS2812_GRB_t;
+
+void bsp_ws2812_set_color(const WS2812_GRB_t *grb);
 void bsp_ws2812_refresh();
+void bsp_ws2812_init();
+void bsp_ws2812_breathe();
 
 #endif //WIRED_MOUSE_BSP_WS2812_H
