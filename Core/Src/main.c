@@ -103,7 +103,7 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
     bsp_ws2812_breathe();
-    HAL_Delay(20);
+    bsp_dwt_delay_us(20000);
   }
   /* USER CODE END 3 */
 }

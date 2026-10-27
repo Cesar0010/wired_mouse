@@ -8,6 +8,7 @@
 #include "bsp_key.h"
 #include "bsp_encoder.h"
 #include "bsp_ws2812.h"
+#include "bsp_delay.h"
 
 void bsp_init();
 

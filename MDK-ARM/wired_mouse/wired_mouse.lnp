@@ -26,6 +26,7 @@
 "wired_mouse\bsp_key.o"
 "wired_mouse\bsp_encoder.o"
 "wired_mouse\bsp_ws2812.o"
+"wired_mouse\bsp_delay.o"
 --strict --scatter "wired_mouse\wired_mouse.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

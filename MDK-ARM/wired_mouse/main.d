@@ -30,4 +30,5 @@ wired_mouse/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
   ..\Core\Inc\dma.h ..\Core\Inc\main.h ..\Core\Inc\tim.h \
   ..\Core\Inc\gpio.h ..\bsp\Inc\bsp.h ..\bsp\Inc\bsp_key.h \
-  ..\bsp\Inc\bsp_encoder.h ..\bsp\Inc\bsp_ws2812.h
+  ..\bsp\Inc\bsp_encoder.h ..\bsp\Inc\bsp_ws2812.h \
+  ..\bsp\Inc\bsp_delay.h
