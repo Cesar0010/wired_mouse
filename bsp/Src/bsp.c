@@ -11,4 +11,5 @@ void bsp_init()
     bsp_ws2812_init();
     bsp_dwt_init();
     bsp_paw3395_init();
+    bsp_cathe_init();
 }

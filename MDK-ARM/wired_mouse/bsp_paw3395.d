@@ -30,4 +30,8 @@ wired_mouse/bsp_paw3395.o: ..\bsp\Src\bsp_paw3395.c \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
+  ..\Middlewares\ST\threadx\common\inc\tx_api.h \
+  ..\Middlewares\ST\threadx\ports\cortex_m4\ac6\inc\tx_port.h \
+  ..\Core\Inc\tx_user.h D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
+  D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h

@@ -6,13 +6,14 @@
 #include "bsp_delay.h"
 #include "bsp_spi.h"
 #include "main.h"
+#include "tx_api.h"
 
 void bsp_paw3395_init()
 {
     HAL_GPIO_WritePin(NRESET_GPIO_Port, NRESET_Pin, GPIO_PIN_RESET);
-    HAL_Delay(50);
+    tx_thread_sleep(10);
     HAL_GPIO_WritePin(NRESET_GPIO_Port, NRESET_Pin, GPIO_PIN_SET);
-    HAL_Delay(50);
+    tx_thread_sleep(10);
 
     bsp_spi1_cs_low();
     bsp_dwt_delay_ns(120);
@@ -20,7 +21,7 @@ void bsp_paw3395_init()
     bsp_dwt_delay_ns(120);
 
     bsp_write_register(PAW3395_SPI_REGISTER_POWER_UP_RESET, PAW3395_POWER_UP_RESET_POWER_ON);
-    HAL_Delay(5);
+    tx_thread_sleep(1);
 
     bsp_write_register(0x7F ,0x07);
 	bsp_write_register(0x40 ,0x41);
@@ -160,7 +161,7 @@ void bsp_paw3395_init()
 	bsp_write_register(0x23 ,0x70);
 	bsp_write_register(0x22 ,0x01);
 
-	HAL_Delay(1);
+	bsp_dwt_delay_us(1000);
 	uint8_t i = 0;
 	for (i = 0; i < 60; i++)
 	{
@@ -168,7 +169,7 @@ void bsp_paw3395_init()
 		{
 			break;
 		}
-		HAL_Delay(1);
+		bsp_dwt_delay_us(1000);
 	}
 
 	if (i == 60)

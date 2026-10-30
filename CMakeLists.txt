@@ -47,6 +47,18 @@ add_executable(${CMAKE_PROJECT_NAME}
         bsp/Src/bsp_spi.c
         bsp/Inc/bsp_paw3395.h
         bsp/Src/bsp_paw3395.c
+        User/Src/threadx_tasks.c
+        User/Inc/threadx_tasks.h
+        User/Src/threadx_ws2812.c
+        User/Inc/threadx_ws2812.h
+        User/Inc/threadx_encoder.h
+        User/Src/threadx_encoder.c
+        User/Inc/threadx_key.h
+        User/Src/threadx_key.c
+        User/Inc/threadx_pc.h
+        User/Src/threadx_pc.c
+        bsp/Inc/bsp_cathe.h
+        bsp/Src/bsp_cathe.c
 )
 
 # Add STM32CubeMX generated sources
@@ -67,12 +79,18 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
         bsp/Src/bsp_delay.c
         bsp/Src/bsp_spi.c
         bsp/Src/bsp_paw3395.c
+        User/Src/threadx_encoder.c
+        User/Src/threadx_key.c
+        User/Src/threadx_pc.c
+        User/Src/threadx_tasks.c
+        User/Src/threadx_ws2812.c
 )
 
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined include paths
         bsp/Inc
+        User/Inc
 )
 
 # Add project symbols (macros)

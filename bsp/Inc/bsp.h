@@ -10,6 +10,7 @@
 #include "bsp_ws2812.h"
 #include "bsp_delay.h"
 #include "bsp_paw3395.h"
+#include "bsp_cathe.h"
 
 void bsp_init();
 
