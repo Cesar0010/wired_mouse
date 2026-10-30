@@ -59,6 +59,10 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define WS2812_Pin GPIO_PIN_0
 #define WS2812_GPIO_Port GPIOA
+#define CS_Pin GPIO_PIN_4
+#define CS_GPIO_Port GPIOC
+#define NRESET_Pin GPIO_PIN_5
+#define NRESET_GPIO_Port GPIOC
 #define LEFT_KEY_Pin GPIO_PIN_10
 #define LEFT_KEY_GPIO_Port GPIOB
 #define RIGHT_KEY_Pin GPIO_PIN_11

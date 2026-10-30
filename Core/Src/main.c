@@ -19,12 +19,14 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "dma.h"
+#include "spi.h"
 #include "tim.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "bsp.h"
+#include "bsp_spi.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -56,7 +58,7 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+uint8_t buffer[12];
 /* USER CODE END 0 */
 
 /**
@@ -91,6 +93,7 @@ int main(void)
   MX_DMA_Init();
   MX_TIM3_Init();
   MX_TIM2_Init();
+  MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
   bsp_init();
   /* USER CODE END 2 */
@@ -102,8 +105,8 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    bsp_ws2812_breathe();
-    bsp_dwt_delay_us(20000);
+    bsp_paw3395_burst_read(buffer);
+    HAL_Delay(1);
   }
   /* USER CODE END 3 */
 }

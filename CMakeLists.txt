@@ -43,6 +43,10 @@ add_executable(${CMAKE_PROJECT_NAME}
         bsp/Src/bsp_ws2812.c
         bsp/Inc/bsp_delay.h
         bsp/Src/bsp_delay.c
+        bsp/Inc/bsp_spi.h
+        bsp/Src/bsp_spi.c
+        bsp/Inc/bsp_paw3395.h
+        bsp/Src/bsp_paw3395.c
 )
 
 # Add STM32CubeMX generated sources
@@ -61,6 +65,8 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
         bsp/Src/bsp_encoder.c
         bsp/Src/bsp_ws2812.c
         bsp/Src/bsp_delay.c
+        bsp/Src/bsp_spi.c
+        bsp/Src/bsp_paw3395.c
 )
 
 # Add include paths
