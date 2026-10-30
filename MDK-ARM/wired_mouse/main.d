@@ -34,4 +34,4 @@ wired_mouse/main.o: ..\Core\Src\main.c ..\Core\Inc\app_threadx.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
   ..\Core\Inc\dma.h ..\Core\Inc\main.h ..\Core\Inc\spi.h \
-  ..\Core\Inc\tim.h ..\Core\Inc\gpio.h
+  ..\Core\Inc\tim.h ..\Core\Inc\gpio.h ..\User\Inc\threadx_tasks.h

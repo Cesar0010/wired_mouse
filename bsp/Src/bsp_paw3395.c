@@ -189,6 +189,8 @@ void bsp_paw3395_init()
 	{
 		bsp_read_register(reg_it);
 	}
+
+	bsp_paw3395_dpi_config(1500);
 }
 
 void bsp_paw3395_burst_read(uint8_t *buffer)

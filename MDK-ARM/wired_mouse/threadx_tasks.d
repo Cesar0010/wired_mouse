@@ -1,5 +1,6 @@
 wired_mouse/threadx_tasks.o: ..\User\Src\threadx_tasks.c \
   ..\User\Inc\threadx_tasks.h \
+  ..\Middlewares\ST\threadx\common\inc\tx_api.h \
   ..\Middlewares\ST\threadx\ports\cortex_m4\ac6\inc\tx_port.h \
   ..\Core\Inc\tx_user.h D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
@@ -36,5 +37,4 @@ wired_mouse/threadx_tasks.o: ..\User\Src\threadx_tasks.c \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
   ..\User\Inc\threadx_key.h ..\User\Inc\threadx_pc.h \
-  ..\User\Inc\threadx_encoder.h ..\User\Inc\threadx_ws2812.h \
-  ..\Middlewares\ST\threadx\common\inc\tx_api.h
+  ..\User\Inc\threadx_encoder.h ..\User\Inc\threadx_ws2812.h

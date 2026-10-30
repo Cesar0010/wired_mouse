@@ -23,6 +23,7 @@
 #include "spi.h"
 #include "tim.h"
 #include "gpio.h"
+#include "threadx_tasks.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -94,8 +95,9 @@ int main(void)
   MX_TIM3_Init();
   MX_TIM2_Init();
   MX_SPI1_Init();
+  MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
-
+  HAL_TIM_Base_Start_IT(&htim6);
   /* USER CODE END 2 */
 
   MX_ThreadX_Init();
@@ -180,7 +182,10 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     HAL_IncTick();
   }
   /* USER CODE BEGIN Callback 1 */
-
+  if (htim->Instance == TIM6)
+  {
+    tx_event_flags_set(&event_group,TIME_TO_SEND_DATA_TO_PC, TX_OR);
+  }
   /* USER CODE END Callback 1 */
 }
 
