@@ -7,6 +7,13 @@ wired_mouse/threadx_tasks.o: ..\User\Src\threadx_tasks.c \
   D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h ..\bsp\Inc\bsp.h \
   ..\bsp\Inc\bsp_key.h ..\bsp\Inc\bsp_encoder.h ..\bsp\Inc\bsp_ws2812.h \
   ..\bsp\Inc\bsp_delay.h ..\bsp\Inc\bsp_paw3395.h ..\bsp\Inc\bsp_cathe.h \
+  ..\bsp\Inc\bsp_usbx.h ..\Middlewares\ST\usbx\common\core\inc\ux_api.h \
+  ..\Middlewares\ST\usbx\ports\generic\inc\ux_port.h \
+  ..\USBX\App\ux_user.h D:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  ..\Middlewares\ST\usbx\common\core\inc\ux_utility.h \
+  ..\Middlewares\ST\usbx\common\core\inc\ux_system.h \
+  ..\Middlewares\ST\usbx\common\usbx_device_classes\inc\ux_device_class_hid.h \
+  ..\bsp\Inc\bsp_usb_hid.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
   ..\Core\Inc\stm32f4xx_hal_conf.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \
@@ -36,5 +43,8 @@ wired_mouse/threadx_tasks.o: ..\User\Src\threadx_tasks.c \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h \
   ..\User\Inc\threadx_key.h ..\User\Inc\threadx_pc.h \
   ..\User\Inc\threadx_encoder.h ..\User\Inc\threadx_ws2812.h

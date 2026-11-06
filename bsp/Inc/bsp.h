@@ -11,6 +11,8 @@
 #include "bsp_delay.h"
 #include "bsp_paw3395.h"
 #include "bsp_cathe.h"
+#include "bsp_usbx.h"
+#include "bsp_usb_hid.h"
 
 void bsp_init();
 

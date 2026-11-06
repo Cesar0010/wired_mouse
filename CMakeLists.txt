@@ -59,6 +59,10 @@ add_executable(${CMAKE_PROJECT_NAME}
         User/Src/threadx_pc.c
         bsp/Inc/bsp_cathe.h
         bsp/Src/bsp_cathe.c
+        bsp/Inc/bsp_usbx.h
+        bsp/Src/bsp_usbx.c
+        bsp/Inc/bsp_usb_hid.h
+        bsp/Src/bsp_usb_hid.c
 )
 
 # Add STM32CubeMX generated sources
@@ -79,6 +83,8 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
         bsp/Src/bsp_delay.c
         bsp/Src/bsp_spi.c
         bsp/Src/bsp_paw3395.c
+        bsp/Src/bsp_usbx.c
+        bsp/Src/bsp_usb_hid.c
         User/Src/threadx_encoder.c
         User/Src/threadx_key.c
         User/Src/threadx_pc.c

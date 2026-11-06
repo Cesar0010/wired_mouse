@@ -35,6 +35,12 @@ typedef enum
     KEY5_UP = 12,
 }KEY_ENUM;
 
+typedef enum
+{
+    KEY_DOWN = 1,
+    KEY_UP = 0
+}KEY_STATUS_ENUM;
+
 typedef struct
 {
     uint8_t buffer[KEY_FIFO_SIZE];

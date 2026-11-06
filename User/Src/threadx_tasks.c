@@ -4,7 +4,6 @@
 
 #include "threadx_tasks.h"
 #include <stdint.h>
-
 #include "bsp.h"
 #include "stm32f4xx_hal.h"
 #include "threadx_key.h"
@@ -14,10 +13,10 @@
 #include "tx_api.h"
 
 #define  APP_CFG_TASK_START_PRIO                          2u
-#define  APP_CFG_TASK_PC_PRIO                             3u
-#define  APP_CFG_TASK_ENCODER_PRIO                        4u
-#define  APP_CFG_TASK_KEY_PRIO                            4u
-#define  APP_CFG_TASK_WS2812_PRIO                         5u
+#define  APP_CFG_TASK_PC_PRIO                             8u
+#define  APP_CFG_TASK_ENCODER_PRIO                        12u
+#define  APP_CFG_TASK_KEY_PRIO                            12u
+#define  APP_CFG_TASK_WS2812_PRIO                         14u
 
 #define  APP_CFG_TASK_START_STK_SIZE                    2048u
 #define  APP_CFG_TASK_PC_STK_SIZE                       2048u

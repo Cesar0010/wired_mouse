@@ -22,17 +22,17 @@
 #include "dma.h"
 #include "spi.h"
 #include "tim.h"
+#include "usb_otg.h"
 #include "gpio.h"
-#include "threadx_tasks.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "threadx_tasks.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+#include "stm32f4xx.h"
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -96,6 +96,7 @@ int main(void)
   MX_TIM2_Init();
   MX_SPI1_Init();
   MX_TIM6_Init();
+  MX_USB_OTG_FS_PCD_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT(&htim6);
   /* USER CODE END 2 */
@@ -139,7 +140,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLM = 4;
   RCC_OscInitStruct.PLL.PLLN = 168;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
-  RCC_OscInitStruct.PLL.PLLQ = 4;
+  RCC_OscInitStruct.PLL.PLLQ = 7;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
