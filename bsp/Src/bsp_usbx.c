@@ -32,9 +32,9 @@ uint8_t bsp_usbx_init(void *memory_ptr)
     UX_SLAVE_CLASS_HID_PARAMETER hid_parameter;
 
     // 从传入的内存池中分出一块给 USBX 系统
-    temp = tx_byte_allocate(byte_pool, &pointer, UX_DEVICE_APP_MEM_POOL_SIZE - 1024, TX_NO_WAIT);
+    temp = tx_byte_allocate(byte_pool, &pointer, UX_DEVICE_APP_MEM_POOL_SIZE - 128, TX_NO_WAIT);
     // 初始化 USBX 系统
-    temp = ux_system_initialize(pointer, UX_DEVICE_APP_MEM_POOL_SIZE - 1024, UX_NULL, 0);
+    temp = ux_system_initialize(pointer, UX_DEVICE_APP_MEM_POOL_SIZE - 128, UX_NULL, 0);
 
     // 获取你在 ux_device_descriptors.c 里生成的描述符
     uint8_t* framework_hs = USBD_Get_Device_Framework_Speed(USBD_HIGH_SPEED, &framework_hs_len);
